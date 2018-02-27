@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <form name="calc">
+
+        <input type="text" id="result" name="result"/>
+        <br>
+
+        <input type="button" id="buttonAC" value="AC" onclick="calc.result.value = ''" />
+        <input type="button" id="button+/-" value="+/-" onclick="plusMinus()" />
+        <input type="button" id="button%" value=" % " onclick="calc.result.value += '%'" />
+        <input type="button" id="button/" value=" /  " onclick="calc.result.value += '/'" />
+
+        <br>
+
+        <input type="button" id="button7" value=" 7  " onclick="calc.result.value += '7'" />
+        <input type="button" id="button8" value=" 8  " onclick="calc.result.value += '8'" />
+        <input type="button" id="button9" value=" 9 " onclick="calc.result.value += '9'" />
+        <input type="button" id="buttonx" value=" x  " onclick="calc.result.value += '*'" />
+        <br>
+
+        <input type="button" id="button4" value=" 4  " onclick="calc.result.value += '4'" />
+        <input type="button" id="button5" value=" 5  " onclick="calc.result.value += '5'" />
+        <input type="button" id="button6" value=" 6 " onclick="calc.result.value += '6'" />
+        <input type="button" id="button-" value=" -  " onclick="calc.result.value += '-'" />
+        <br>
+
+        <input type="button" id="one" value=" 1   " onclick="calc.result.value += '1'" />
+        <input type="button" id="two" value=" 2  " onclick="calc.result.value += '2'" />
+        <input type="button" id="three" value=" 3 " onclick="calc.result.value += '3'" />
+        <input type="button" id="plus" value=" + " onclick="calc.result.value += '+'" />
+        <br>
+
+        <input type="button" id="button0" value=" 0              " onclick="calc.result.value += '0'" />
+        <input type="button" id="button." value="  . " onclick="calc.result.value += '.'" />
+        <input type="button" id="equals" value=" = " onclick="calc.result.value = eval(calc.result.value)" />
+        <br>
+
+    </form>
+</body>
+</html>
+
