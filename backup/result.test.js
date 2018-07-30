@@ -1,32 +1,21 @@
 const phantomcss = require('phantomcss');
 
-casper.test.begin('Calculator Visual Tests', function ( test ) {
+casper.test.begin( 'Calculator Visual Tests', function ( test ) {
 
     phantomcss.init( {
         rebase: casper.cli.get( "rebase" )
     } );
 
-    // Initialize URL
-    casper.start( 'http://localhost:8080/calculator-rearranged.html' );
-    // Establish resolution
+    casper.start( 'http://localhost:8080/calculator-normal.html' );
+
     casper.viewport( 1024, 768 );
 
-    // Test
-    casper.then( function () {
-        casper.waitForSelector( 'body',
-            function success() {
-                phantomcss.screenshot( 'body', 'simple calculator body');
-            },
-            function timeout() {
-                casper.test.fail( 'Failed to find calculator body' );
-            }
-        );
-    });
-
+    // Calculation Test
     casper.then( function () {
         casper.click( '#one' );
         casper.click( '#plus' );
         casper.click( '#one' );
+
         casper.waitForSelector( '#result',
             function success() {
 
